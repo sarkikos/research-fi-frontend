@@ -75,6 +75,7 @@ import { TreemapComponent } from './component/visualisation/treemap/treemap.comp
 import { HighlightSearch } from './pipes/highlight.pipe';
 
 import { LOCALE_ID } from '@angular/core';
+import { AccessibilityComponent } from './component/accessibility/accessibility.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -106,7 +107,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ListItemComponent,
     SunburstComponent,
     TreemapComponent,
-    HighlightSearch
+    HighlightSearch,
+    AccessibilityComponent
   ],
   imports: [
     BrowserModule,
