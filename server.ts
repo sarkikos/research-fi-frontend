@@ -101,7 +101,7 @@ routes.forEach((route) => {
 });
 
 // Start up the Node server
-app.listen(EXPRESS_HTTP_PORT, () => {
-  console.log(`Node Express server listening on http://localhost:${EXPRESS_HTTP_PORT}`);
+app.listen(EXPRESS_HTTP_PORT, '0.0.0.0', () => {
+  console.log(`Node Express server listening on port ${EXPRESS_HTTP_PORT}`);
   console.log("DIST_FOLDER " + DIST_FOLDER);
 });
