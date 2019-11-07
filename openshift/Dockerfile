@@ -17,8 +17,6 @@ FROM node:12.12.0-alpine as angular
 COPY --from=builder /app/dist/ /dist/
 WORKDIR /
 
-RUN chgrp -R 0 /dist
-USER 1000
-
 EXPOSE 8080
+USER 1000
 CMD node dist/server.js
