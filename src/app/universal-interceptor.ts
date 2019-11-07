@@ -32,6 +32,7 @@ export class UniversalInterceptor implements HttpInterceptor {
     */
     if (this.request && req.url.indexOf('config.json') !== -1) {
       let configJsonUrl = `http://localhost:${EXPRESS_HTTP_PORT}/assets/config/config.json`;
+      console.log("MODIFIED URL " + configJsonUrl);
       serverReq = req.clone({url: configJsonUrl});
     }
     return next.handle(serverReq);
