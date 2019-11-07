@@ -31,7 +31,7 @@ const app = express();
 const DIST_FOLDER = join(process.cwd(), 'dist');
 
 const routes = [
-  {path: '/en/*', view: 'en/index', bundle: require('./dist/server/en/main')},
+  //{path: '/en/*', view: 'en/index', bundle: require('./dist/server/en/main')},
   //{path: '/sv/*', view: 'sv/index', bundle: require('./dist/server/sv/main')},
   {path: '/*', view: 'index', bundle: require('./dist/server/fi/main')}
 ];
