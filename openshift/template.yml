@@ -73,8 +73,8 @@ objects:
   spec:
     source:
       git:
-        uri: https://github.com/CSCfi/research-fi-frontend.git
-        ref: devel
+        uri: https://github.com/sarkikos/research-fi-frontend.git
+        ref: testbuild
       contextDir: .
     strategy:
       dockerStrategy:
@@ -96,8 +96,8 @@ objects:
   spec:
     source:
       git:
-        uri: https://github.com/CSCfi/research-fi-frontend.git
-        ref: devel
+        uri: https://github.com/sarkikos/research-fi-frontend.git
+        ref: testbuild
       contextDir: .
     strategy:
       jenkinsPipelineStrategy:
@@ -122,7 +122,7 @@ objects:
       spec:
         containers:
           - name: frontend-devel
-            image: researchfi/researchfi-frontend-devel
+            image: ts/researchfi-frontend-devel
             imagePullPolicy: Always
             ports:
               - containerPort: 8080
@@ -186,7 +186,7 @@ objects:
       spec:
         containers:
           - name: frontend-production
-            image: researchfi/researchfi-frontend-production
+            image: ts/researchfi-frontend-production
             imagePullPolicy: Always
             ports:
               - containerPort: 8080
