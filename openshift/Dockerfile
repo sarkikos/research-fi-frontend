@@ -9,8 +9,6 @@
 FROM node:12.12.0-alpine as builder
 COPY . /app
 WORKDIR /app
-RUN chown -R node:node /app
-USER node
 RUN npm install
 RUN npm run build:ssr
 
@@ -19,8 +17,8 @@ FROM node:12.12.0-alpine as angular
 COPY --from=builder /app/dist/ /dist/
 WORKDIR /
 
-RUN chown -R node:node /dist
-USER node
+RUN chgrp -R 0 /dist
+USER 1000
 
 EXPOSE 8080
 CMD node dist/server.js
